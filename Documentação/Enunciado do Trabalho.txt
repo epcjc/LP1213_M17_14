@@ -1,0 +1,32 @@
+Pretende-se que construam uma aplicação que permita gerir torneios de futebol. 
+Os dados a armazenar são os seguintes: 
+
+Equipa: 
+
+Código 
+Nome 
+Jogos 
+Vitórias 
+Empates 
+Derrotas 
+Auto-golos Adversários (para saber quantos golos a equipa marcou) 
+Pontos 
+
+Jogadores (Max: 25) 
+
+Número 
+Código da equipa 
+Nome 
+Golos Marcados 
+Golos Sofridos (Guarda-redes) 
+Cartões Amarelos 
+Cartões Vermelhos 
+
+A aplicação deve:
+
+Gerir (inserir, visualizar, editar, eliminar) os dados
+Gerar o calendário de jogos
+Permitir introduzir resultados de jogos, incluindo os marcadores de golos. Pode ser feito jornada a jornada ou por jogo.
+Mostrar a classificação actual.
+Listar melhores marcadores e melhores guarda-redes (média por jogo)
+Listar equipas e jogadores com mais cartões
