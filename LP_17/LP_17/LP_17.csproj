@@ -66,12 +66,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Inserir_Jogador.cs" />
-    <Compile Include="Inserir_Nacionalidades.cs">
+    <Compile Include="Inserir_Equipa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inserir_Nacionalidades.Designer.cs">
-      <DependentUpon>Inserir_Nacionalidades.cs</DependentUpon>
+    <Compile Include="Inserir_Equipa.Designer.cs">
+      <DependentUpon>Inserir_Equipa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inserir_Jogador.cs" />
+    <Compile Include="Inserir_Pais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inserir_Pais.Designer.cs">
+      <DependentUpon>Inserir_Pais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inserir_Treinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inserir_Treinador.Designer.cs">
+      <DependentUpon>Inserir_Treinador.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -87,8 +99,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Inserir_Nacionalidades.resx">
-      <DependentUpon>Inserir_Nacionalidades.cs</DependentUpon>
+    <EmbeddedResource Include="Inserir_Equipa.resx">
+      <DependentUpon>Inserir_Equipa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inserir_Pais.resx">
+      <DependentUpon>Inserir_Pais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inserir_Treinador.resx">
+      <DependentUpon>Inserir_Treinador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

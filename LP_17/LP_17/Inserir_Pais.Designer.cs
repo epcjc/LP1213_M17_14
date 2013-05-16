@@ -1,6 +1,6 @@
 ﻿namespace LP_17
 {
-    partial class Inserir_Nacionalidades
+    partial class Inserir_Pais
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inserir_Nacionalidades));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inserir_Pais));
             System.Windows.Forms.Label iDLabel;
-            System.Windows.Forms.Label nacionalidadeLabel;
+            System.Windows.Forms.Label nomeLabel;
             this.bDDataSet = new LP_17.BDDataSet();
-            this.nacionalidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nacionalidadesTableAdapter = new LP_17.BDDataSetTableAdapters.NacionalidadesTableAdapter();
+            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
             this.tableAdapterManager = new LP_17.BDDataSetTableAdapters.TableAdapterManager();
-            this.nacionalidadesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.paisBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -48,15 +48,15 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.nacionalidadesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.paisBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.iDTextBox = new System.Windows.Forms.TextBox();
-            this.nacionalidadeTextBox = new System.Windows.Forms.TextBox();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
             iDLabel = new System.Windows.Forms.Label();
-            nacionalidadeLabel = new System.Windows.Forms.Label();
+            nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nacionalidadesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nacionalidadesBindingNavigator)).BeginInit();
-            this.nacionalidadesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingNavigator)).BeginInit();
+            this.paisBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // bDDataSet
@@ -64,14 +64,14 @@
             this.bDDataSet.DataSetName = "BDDataSet";
             this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nacionalidadesBindingSource
+            // paisBindingSource
             // 
-            this.nacionalidadesBindingSource.DataMember = "Nacionalidades";
-            this.nacionalidadesBindingSource.DataSource = this.bDDataSet;
+            this.paisBindingSource.DataMember = "Pais";
+            this.paisBindingSource.DataSource = this.bDDataSet;
             // 
-            // nacionalidadesTableAdapter
+            // paisTableAdapter
             // 
-            this.nacionalidadesTableAdapter.ClearBeforeFill = true;
+            this.paisTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -82,20 +82,19 @@
             this.tableAdapterManager.GolosTableAdapter = null;
             this.tableAdapterManager.JogadoresTableAdapter = null;
             this.tableAdapterManager.JogosTableAdapter = null;
-            this.tableAdapterManager.NacionalidadesTableAdapter = this.nacionalidadesTableAdapter;
+            this.tableAdapterManager.PaisTableAdapter = this.paisTableAdapter;
             this.tableAdapterManager.Torneio_EquipasTableAdapter = null;
             this.tableAdapterManager.TorneiosTableAdapter = null;
             this.tableAdapterManager.TreinadorTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LP_17.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsersTableAdapter = null;
             // 
-            // nacionalidadesBindingNavigator
+            // paisBindingNavigator
             // 
-            this.nacionalidadesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.nacionalidadesBindingNavigator.BindingSource = this.nacionalidadesBindingSource;
-            this.nacionalidadesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.nacionalidadesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.nacionalidadesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paisBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.paisBindingNavigator.BindingSource = this.paisBindingSource;
+            this.paisBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.paisBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.paisBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -107,17 +106,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.nacionalidadesBindingNavigatorSaveItem});
-            this.nacionalidadesBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.nacionalidadesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.nacionalidadesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.nacionalidadesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.nacionalidadesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.nacionalidadesBindingNavigator.Name = "nacionalidadesBindingNavigator";
-            this.nacionalidadesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.nacionalidadesBindingNavigator.Size = new System.Drawing.Size(318, 25);
-            this.nacionalidadesBindingNavigator.TabIndex = 0;
-            this.nacionalidadesBindingNavigator.Text = "bindingNavigator1";
+            this.paisBindingNavigatorSaveItem});
+            this.paisBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.paisBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.paisBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.paisBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.paisBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.paisBindingNavigator.Name = "paisBindingNavigator";
+            this.paisBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.paisBindingNavigator.Size = new System.Drawing.Size(284, 25);
+            this.paisBindingNavigator.TabIndex = 0;
+            this.paisBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -204,19 +203,19 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // nacionalidadesBindingNavigatorSaveItem
+            // paisBindingNavigatorSaveItem
             // 
-            this.nacionalidadesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.nacionalidadesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("nacionalidadesBindingNavigatorSaveItem.Image")));
-            this.nacionalidadesBindingNavigatorSaveItem.Name = "nacionalidadesBindingNavigatorSaveItem";
-            this.nacionalidadesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.nacionalidadesBindingNavigatorSaveItem.Text = "Save Data";
-            this.nacionalidadesBindingNavigatorSaveItem.Click += new System.EventHandler(this.nacionalidadesBindingNavigatorSaveItem_Click);
+            this.paisBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.paisBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("paisBindingNavigatorSaveItem.Image")));
+            this.paisBindingNavigatorSaveItem.Name = "paisBindingNavigatorSaveItem";
+            this.paisBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.paisBindingNavigatorSaveItem.Text = "Save Data";
+            this.paisBindingNavigatorSaveItem.Click += new System.EventHandler(this.paisBindingNavigatorSaveItem_Click);
             // 
             // iDLabel
             // 
             iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(60, 99);
+            iDLabel.Location = new System.Drawing.Point(60, 112);
             iDLabel.Name = "iDLabel";
             iDLabel.Size = new System.Drawing.Size(21, 13);
             iDLabel.TabIndex = 1;
@@ -224,47 +223,47 @@
             // 
             // iDTextBox
             // 
-            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nacionalidadesBindingSource, "ID", true));
-            this.iDTextBox.Location = new System.Drawing.Point(144, 96);
+            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "ID", true));
+            this.iDTextBox.Location = new System.Drawing.Point(104, 109);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.Size = new System.Drawing.Size(100, 20);
             this.iDTextBox.TabIndex = 2;
             // 
-            // nacionalidadeLabel
+            // nomeLabel
             // 
-            nacionalidadeLabel.AutoSize = true;
-            nacionalidadeLabel.Location = new System.Drawing.Point(60, 125);
-            nacionalidadeLabel.Name = "nacionalidadeLabel";
-            nacionalidadeLabel.Size = new System.Drawing.Size(78, 13);
-            nacionalidadeLabel.TabIndex = 3;
-            nacionalidadeLabel.Text = "Nacionalidade:";
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(60, 138);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 3;
+            nomeLabel.Text = "Nome:";
             // 
-            // nacionalidadeTextBox
+            // nomeTextBox
             // 
-            this.nacionalidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nacionalidadesBindingSource, "Nacionalidade", true));
-            this.nacionalidadeTextBox.Location = new System.Drawing.Point(144, 122);
-            this.nacionalidadeTextBox.Name = "nacionalidadeTextBox";
-            this.nacionalidadeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nacionalidadeTextBox.TabIndex = 4;
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(104, 135);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.TabIndex = 4;
             // 
-            // Inserir_Nacionalidades
+            // Inserir_Pais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 261);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
-            this.Controls.Add(nacionalidadeLabel);
-            this.Controls.Add(this.nacionalidadeTextBox);
-            this.Controls.Add(this.nacionalidadesBindingNavigator);
-            this.Name = "Inserir_Nacionalidades";
-            this.Text = "Inserir_Nacionalidades";
-            this.Load += new System.EventHandler(this.Inserir_Nacionalidades_Load);
+            this.Controls.Add(nomeLabel);
+            this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(this.paisBindingNavigator);
+            this.Name = "Inserir_Pais";
+            this.Text = "Inserir_Pais";
+            this.Load += new System.EventHandler(this.Inserir_Pais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nacionalidadesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nacionalidadesBindingNavigator)).EndInit();
-            this.nacionalidadesBindingNavigator.ResumeLayout(false);
-            this.nacionalidadesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingNavigator)).EndInit();
+            this.paisBindingNavigator.ResumeLayout(false);
+            this.paisBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,10 +272,10 @@
         #endregion
 
         private BDDataSet bDDataSet;
-        private System.Windows.Forms.BindingSource nacionalidadesBindingSource;
-        private BDDataSetTableAdapters.NacionalidadesTableAdapter nacionalidadesTableAdapter;
+        private System.Windows.Forms.BindingSource paisBindingSource;
+        private BDDataSetTableAdapters.PaisTableAdapter paisTableAdapter;
         private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator nacionalidadesBindingNavigator;
+        private System.Windows.Forms.BindingNavigator paisBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -288,8 +287,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton nacionalidadesBindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolStripButton paisBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox iDTextBox;
-        private System.Windows.Forms.TextBox nacionalidadeTextBox;
+        private System.Windows.Forms.TextBox nomeTextBox;
     }
 }
