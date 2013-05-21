@@ -21,13 +21,7 @@ namespace LP_17
             this.equipaTableAdapter.Insert(textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(textBox2.Text));
         }
 
-        private void equipaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.equipaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bDDataSet);
-
-        }
+       
 
         private void Inserir_Equipa_Load(object sender, EventArgs e)
         {

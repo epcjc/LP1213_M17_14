@@ -51,14 +51,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(152, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.Size = new System.Drawing.Size(165, 20);
             this.textBox1.TabIndex = 0;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(150, 153);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(167, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // comboBox1
@@ -66,7 +66,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(152, 71);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(165, 21);
             this.comboBox1.TabIndex = 3;
             // 
             // comboBox2
@@ -74,7 +74,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(152, 112);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(165, 21);
             this.comboBox2.TabIndex = 4;
             // 
             // button1
@@ -151,6 +151,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Classificacao_TorneioTableAdapter = null;
             this.tableAdapterManager.EquipaTableAdapter = null;
+            this.tableAdapterManager.EstadoTableAdapter = null;
             this.tableAdapterManager.Estatisticas_TorneioTableAdapter = null;
             this.tableAdapterManager.GolosTableAdapter = null;
             this.tableAdapterManager.JogadoresTableAdapter = null;
