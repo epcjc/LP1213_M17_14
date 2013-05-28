@@ -27,7 +27,8 @@ namespace LP_17
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, dateTimePicker2.Value, 
+
+            this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, dateTimePicker2.Value, null, Convert.ToInt16(comboBox1.SelectedValue)); 
         }
     }
 }
