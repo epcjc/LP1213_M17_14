@@ -18,8 +18,21 @@ namespace LP_17
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.equipaTableAdapter.Insert(textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(textBox2.Text));
-        }
+            string message = "Confirmar";
+
+            var result = MessageBox.Show(message,"Inserção",
+                                  MessageBoxButtons.YesNo,
+                                  MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                this.equipaTableAdapter.Insert(textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(textBox2.Text));
+            }
+            else
+            {
+                MessageBox.Show("Operação Cancelada !!!");
+            }
+            }
 
        
 

@@ -21,5 +21,10 @@ namespace LP_17
             Inserir_Torneios frm = new Inserir_Torneios();
             frm.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -44,10 +44,13 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.equipaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
+            this.torneio_EquipasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.torneio_EquipasTableAdapter = new LP_17.BDDataSetTableAdapters.Torneio_EquipasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.estadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneiosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneio_EquipasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -162,11 +165,20 @@
             // 
             this.equipaTableAdapter.ClearBeforeFill = true;
             // 
+            // torneio_EquipasBindingSource
+            // 
+            this.torneio_EquipasBindingSource.DataMember = "Torneio_Equipas";
+            this.torneio_EquipasBindingSource.DataSource = this.bDDataSet;
+            // 
+            // torneio_EquipasTableAdapter
+            // 
+            this.torneio_EquipasTableAdapter.ClearBeforeFill = true;
+            // 
             // Inserir_Torneios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 292);
+            this.ClientSize = new System.Drawing.Size(644, 298);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -181,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneiosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneio_EquipasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +216,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.BindingSource equipaBindingSource;
         private BDDataSetTableAdapters.EquipaTableAdapter equipaTableAdapter;
+        private System.Windows.Forms.BindingSource torneio_EquipasBindingSource;
+        private BDDataSetTableAdapters.Torneio_EquipasTableAdapter torneio_EquipasTableAdapter;
     }
 }
