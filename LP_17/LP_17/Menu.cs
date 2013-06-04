@@ -15,5 +15,11 @@ namespace LP_17
         {
             InitializeComponent();
         }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inserir_Torneios frm = new Inserir_Torneios();
+            frm.Show();
+        }
     }
 }

@@ -20,6 +20,8 @@ namespace LP_17
 
         private void Inserir_Torneios_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bDDataSet.Equipa' table. You can move, or remove it, as needed.
+            this.equipaTableAdapter.Fill(this.bDDataSet.Equipa);
             // TODO: This line of code loads data into the 'bDDataSet.Estado' table. You can move, or remove it, as needed.
             this.estadoTableAdapter.Fill(this.bDDataSet.Estado);
 
@@ -28,7 +30,11 @@ namespace LP_17
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, dateTimePicker2.Value, null, Convert.ToInt16(comboBox1.SelectedValue)); 
+           this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, null, null, 1);
+           int ultimoId = (int) this.torneiosTableAdapter.UltimoID();
+
+           MessageBox.Show(ultimoId.ToString());
+            // Falta inserir equipas na tabela Torneio_Equipas
         }
     }
 }
