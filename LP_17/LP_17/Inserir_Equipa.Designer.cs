@@ -32,20 +32,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bDDataSet = new LP_17.BDDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bDDataSet = new LP_17.BDDataSet();
             this.equipaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
             this.tableAdapterManager = new LP_17.BDDataSetTableAdapters.TableAdapterManager();
-            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -72,6 +72,16 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "ID";
+            // 
+            // paisBindingSource
+            // 
+            this.paisBindingSource.DataMember = "Pais";
+            this.paisBindingSource.DataSource = this.bDDataSet;
+            // 
+            // bDDataSet
+            // 
+            this.bDDataSet.DataSetName = "BDDataSet";
+            this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -118,11 +128,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // bDDataSet
-            // 
-            this.bDDataSet.DataSetName = "BDDataSet";
-            this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // equipaBindingSource
             // 
@@ -138,6 +144,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Classificacao_TorneioTableAdapter = null;
             this.tableAdapterManager.EquipaTableAdapter = this.equipaTableAdapter;
+            this.tableAdapterManager.EstadoTableAdapter = null;
             this.tableAdapterManager.Estatisticas_TorneioTableAdapter = null;
             this.tableAdapterManager.GolosTableAdapter = null;
             this.tableAdapterManager.JogadoresTableAdapter = null;
@@ -147,11 +154,7 @@
             this.tableAdapterManager.TorneiosTableAdapter = null;
             this.tableAdapterManager.TreinadorTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LP_17.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // paisBindingSource
-            // 
-            this.paisBindingSource.DataMember = "Pais";
-            this.paisBindingSource.DataSource = this.bDDataSet;
+            this.tableAdapterManager.UtilizadoresTableAdapter = null;
             // 
             // paisTableAdapter
             // 
@@ -173,9 +176,9 @@
             this.Name = "Inserir_Equipa";
             this.Text = "Inserir_Equipa";
             this.Load += new System.EventHandler(this.Inserir_Equipa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

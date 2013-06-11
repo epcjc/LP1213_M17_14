@@ -37,7 +37,37 @@ namespace LP_17
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.treinadorTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(comboBox2.SelectedValue));
+            try
+            {
+                string message = "Confirmar !!";
+
+                var result = MessageBox.Show(message, "Inserção",
+                                      MessageBoxButtons.YesNo,
+                                      MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.treinadorTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(comboBox2.SelectedValue));
+                    MessageBox.Show("Dados inseridos com sucesso !!");
+                }
+                else
+                {
+                    MessageBox.Show("Operação Cancelada !!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro !!");
+
+            }
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -16,12 +16,12 @@ namespace LP_17
             InitializeComponent();
         }
 
-       
+
 
         private void Inserir_Torneios_Load(object sender, EventArgs e)
         {
-// TODO: This line of code loads data into the 'bDDataSet.Torneio_Equipas' table. You can move, or remove it, as needed.
-this.torneio_EquipasTableAdapter.Fill(this.bDDataSet.Torneio_Equipas);
+            // TODO: This line of code loads data into the 'bDDataSet.Torneio_Equipas' table. You can move, or remove it, as needed.
+            this.torneio_EquipasTableAdapter.Fill(this.bDDataSet.Torneio_Equipas);
             // TODO: This line of code loads data into the 'bDDataSet.Equipa' table. You can move, or remove it, as needed.
             this.equipaTableAdapter.Fill(this.bDDataSet.Equipa);
             // TODO: This line of code loads data into the 'bDDataSet.Estado' table. You can move, or remove it, as needed.
@@ -32,23 +32,47 @@ this.torneio_EquipasTableAdapter.Fill(this.bDDataSet.Torneio_Equipas);
         private void button1_Click(object sender, EventArgs e)
         {
 
-           this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, null, null, 1);
-           int ultimoId = (int) this.torneiosTableAdapter.UltimoID();
-            int ID_Equipa;
-
-           MessageBox.Show(ultimoId.ToString());
-            // Falta inserir equipas na tabela Torneio_Equipas
-
-             foreach (DataRowView drv in  listBox1.SelectedItems)
+            try
             {
-                ID_Equipa = (int) drv["ID_Equipa"];
+                string message = "Confirmar !!";
+                this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, null, null, 1);
+                int ultimoId = (int)this.torneiosTableAdapter.UltimoID();
+                int ID_Equipa;
 
-                this.torneio_EquipasTableAdapter.Insert(ultimoId, ID_Equipa);
-               
+                var result = MessageBox.Show(message, "Inserção",
+                                      MessageBoxButtons.YesNo,
+                                      MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    foreach (DataRowView drv in listBox1.SelectedItems)
+                    {
+                        ID_Equipa = (int)drv["ID"];
+
+                        this.torneio_EquipasTableAdapter.Insert(ultimoId, ID_Equipa);
+
+                    }
+
+                    MessageBox.Show("Dados inseridos com sucesso !!");
+                }
+                else
+                {
+                    MessageBox.Show("Operação cancelada !!");
+                }
+
             }
 
-            MessageBox.Show("Inserido com sucesso");
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro !!");
+
+            }
+
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
-
+}

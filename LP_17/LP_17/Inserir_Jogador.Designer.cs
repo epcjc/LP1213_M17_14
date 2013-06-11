@@ -32,7 +32,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.equipaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bDDataSet = new LP_17.BDDataSet();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,19 +43,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bDDataSet = new LP_17.BDDataSet();
             this.jogadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jogadoresTableAdapter = new LP_17.BDDataSetTableAdapters.JogadoresTableAdapter();
             this.tableAdapterManager = new LP_17.BDDataSetTableAdapters.TableAdapterManager();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
-            this.equipaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jogadoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
+            this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -80,6 +80,16 @@
             this.comboBox1.TabIndex = 3;
             this.comboBox1.ValueMember = "ID";
             // 
+            // equipaBindingSource
+            // 
+            this.equipaBindingSource.DataMember = "Equipa";
+            this.equipaBindingSource.DataSource = this.bDDataSet;
+            // 
+            // bDDataSet
+            // 
+            this.bDDataSet.DataSetName = "BDDataSet";
+            this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox2
             // 
             this.comboBox2.DataSource = this.paisBindingSource;
@@ -90,6 +100,11 @@
             this.comboBox2.Size = new System.Drawing.Size(161, 21);
             this.comboBox2.TabIndex = 4;
             this.comboBox2.ValueMember = "ID";
+            // 
+            // paisBindingSource
+            // 
+            this.paisBindingSource.DataMember = "Pais";
+            this.paisBindingSource.DataSource = this.bDDataSet;
             // 
             // label1
             // 
@@ -154,11 +169,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // bDDataSet
-            // 
-            this.bDDataSet.DataSetName = "BDDataSet";
-            this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // jogadoresBindingSource
             // 
@@ -174,6 +185,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Classificacao_TorneioTableAdapter = null;
             this.tableAdapterManager.EquipaTableAdapter = this.equipaTableAdapter;
+            this.tableAdapterManager.EstadoTableAdapter = null;
             this.tableAdapterManager.Estatisticas_TorneioTableAdapter = null;
             this.tableAdapterManager.GolosTableAdapter = null;
             this.tableAdapterManager.JogadoresTableAdapter = this.jogadoresTableAdapter;
@@ -183,6 +195,15 @@
             this.tableAdapterManager.TorneiosTableAdapter = null;
             this.tableAdapterManager.TreinadorTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LP_17.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UtilizadoresTableAdapter = null;
+            // 
+            // equipaTableAdapter
+            // 
+            this.equipaTableAdapter.ClearBeforeFill = true;
+            // 
+            // paisTableAdapter
+            // 
+            this.paisTableAdapter.ClearBeforeFill = true;
             // 
             // dateTimePicker1
             // 
@@ -190,24 +211,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(161, 20);
             this.dateTimePicker1.TabIndex = 0;
-            // 
-            // paisBindingSource
-            // 
-            this.paisBindingSource.DataMember = "Pais";
-            this.paisBindingSource.DataSource = this.bDDataSet;
-            // 
-            // paisTableAdapter
-            // 
-            this.paisTableAdapter.ClearBeforeFill = true;
-            // 
-            // equipaBindingSource
-            // 
-            this.equipaBindingSource.DataMember = "Equipa";
-            this.equipaBindingSource.DataSource = this.bDDataSet;
-            // 
-            // equipaTableAdapter
-            // 
-            this.equipaTableAdapter.ClearBeforeFill = true;
             // 
             // Inserir_Jogador
             // 
@@ -229,10 +232,10 @@
             this.Name = "Inserir_Jogador";
             this.Text = "Inserir_Jogador";
             this.Load += new System.EventHandler(this.Inserir_Jogador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jogadoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

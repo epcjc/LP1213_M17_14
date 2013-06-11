@@ -30,8 +30,40 @@ namespace LP_17
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string a = "";
-            this.jogadoresTableAdapter.Insert(Convert.ToInt16(textBox1.Text), textBox3.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(comboBox2.Text));
+
+            try
+            {
+                string message = "Confirmar !!";
+                string a = "";
+
+                var result = MessageBox.Show(message, "Inserção",
+                                      MessageBoxButtons.YesNo,
+                                      MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.jogadoresTableAdapter.Insert(Convert.ToInt16(textBox1.Text), textBox3.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(comboBox2.Text));
+                    MessageBox.Show("Dados inseridos com sucesso !!");
+                }
+                else
+                {
+                    MessageBox.Show("Operação Cancelada !!");
+                }
+               
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro !!") ;
+
+            }
+            
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
