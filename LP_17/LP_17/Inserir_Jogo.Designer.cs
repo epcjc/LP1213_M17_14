@@ -35,8 +35,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(313, 272);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Inserir_Jogo";
             this.Text = "Inserir_Jogo";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Inserir_Jogo_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Inserir_Jogo_Load);
             this.ResumeLayout(false);
 

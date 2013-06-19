@@ -30,5 +30,10 @@ namespace LP_17
             this.utilizadoresTableAdapter.Fill(this.bDDataSet.Utilizadores);
 
         }
+
+        private void Inserir_Utilizador_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
     }
 }

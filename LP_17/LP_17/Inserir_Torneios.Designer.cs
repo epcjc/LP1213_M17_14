@@ -46,11 +46,14 @@
             this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
             this.torneio_EquipasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.torneio_EquipasTableAdapter = new LP_17.BDDataSetTableAdapters.Torneio_EquipasTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.estadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneiosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneio_EquipasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -79,6 +82,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 20);
             this.textBox1.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.textBox1, "Nome completo do torneio.");
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // dateTimePicker1
             // 
@@ -156,6 +161,7 @@
             this.listBox1.Size = new System.Drawing.Size(163, 199);
             this.listBox1.TabIndex = 13;
             this.listBox1.ValueMember = "ID";
+            this.listBox1.Validating += new System.ComponentModel.CancelEventHandler(this.listBox1_Validating);
             // 
             // equipaBindingSource
             // 
@@ -175,6 +181,10 @@
             // 
             this.torneio_EquipasTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Inserir_Torneios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,14 +197,19 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Inserir_Torneios";
             this.Text = "Inserir_Torneios";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Inserir_Torneios_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Inserir_Torneios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.estadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneiosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneio_EquipasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,7 @@
         private BDDataSetTableAdapters.EquipaTableAdapter equipaTableAdapter;
         private System.Windows.Forms.BindingSource torneio_EquipasBindingSource;
         private BDDataSetTableAdapters.Torneio_EquipasTableAdapter torneio_EquipasTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

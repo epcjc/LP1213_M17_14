@@ -23,5 +23,10 @@ namespace LP_17
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void Listar_Utilizadores_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
     }
 }

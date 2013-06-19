@@ -75,14 +75,14 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem4
             // 
             this.listarToolStripMenuItem4.Name = "listarToolStripMenuItem4";
-            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(103, 22);
             this.listarToolStripMenuItem4.Text = "Listar";
             // 
             // equipasToolStripMenuItem
@@ -128,14 +128,14 @@
             // inserirToolStripMenuItem
             // 
             this.inserirToolStripMenuItem.Name = "inserirToolStripMenuItem";
-            this.inserirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inserirToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.inserirToolStripMenuItem.Text = "Inserir";
             this.inserirToolStripMenuItem.Click += new System.EventHandler(this.inserirToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem2
             // 
             this.listarToolStripMenuItem2.Name = "listarToolStripMenuItem2";
-            this.listarToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem2.Size = new System.Drawing.Size(106, 22);
             this.listarToolStripMenuItem2.Text = "Listar";
             this.listarToolStripMenuItem2.Click += new System.EventHandler(this.listarToolStripMenuItem2_Click);
             // 
@@ -151,14 +151,14 @@
             // inserirToolStripMenuItem1
             // 
             this.inserirToolStripMenuItem1.Name = "inserirToolStripMenuItem1";
-            this.inserirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.inserirToolStripMenuItem1.Size = new System.Drawing.Size(106, 22);
             this.inserirToolStripMenuItem1.Text = "Inserir";
             this.inserirToolStripMenuItem1.Click += new System.EventHandler(this.inserirToolStripMenuItem1_Click);
             // 
             // listarToolStripMenuItem1
             // 
             this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(106, 22);
             this.listarToolStripMenuItem1.Text = "Listar";
             this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
             // 
@@ -174,14 +174,14 @@
             // inserirToolStripMenuItem2
             // 
             this.inserirToolStripMenuItem2.Name = "inserirToolStripMenuItem2";
-            this.inserirToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.inserirToolStripMenuItem2.Size = new System.Drawing.Size(106, 22);
             this.inserirToolStripMenuItem2.Text = "Inserir";
             this.inserirToolStripMenuItem2.Click += new System.EventHandler(this.inserirToolStripMenuItem2_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
@@ -191,9 +191,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 308);
             this.Controls.Add(this.menuStrip1);
+            this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Menu_HelpButtonClicked);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

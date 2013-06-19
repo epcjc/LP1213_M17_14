@@ -218,6 +218,7 @@
     <EmbeddedResource Include="Relatorio_Equipa.resx">
       <DependentUpon>Relatorio_Equipa.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Ajuda.chm" />
     <None Include="app.config" />
     <None Include="BDDataSet.xsc">
       <DependentUpon>BDDataSet.xsd</DependentUpon>

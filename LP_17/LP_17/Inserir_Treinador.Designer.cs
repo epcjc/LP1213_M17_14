@@ -43,8 +43,11 @@
             this.treinadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treinadorTableAdapter = new LP_17.BDDataSetTableAdapters.TreinadorTableAdapter();
             this.tableAdapterManager = new LP_17.BDDataSetTableAdapters.TableAdapterManager();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -53,6 +56,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(165, 20);
             this.textBox1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.textBox1, "Nome completo do treinador.");
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // dateTimePicker1
             // 
@@ -164,6 +169,10 @@
             this.tableAdapterManager.UpdateOrder = LP_17.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UtilizadoresTableAdapter = null;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Inserir_Treinador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,11 +188,16 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Inserir_Treinador";
             this.Text = "Inserir_Treinador";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Inserir_Treinador_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Inserir_Treinador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +219,7 @@
         private System.Windows.Forms.BindingSource treinadorBindingSource;
         private BDDataSetTableAdapters.TreinadorTableAdapter treinadorTableAdapter;
         private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

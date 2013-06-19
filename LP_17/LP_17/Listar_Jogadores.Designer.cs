@@ -70,8 +70,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 316);
             this.Controls.Add(this.reportViewer1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Listar_Jogadores";
             this.Text = "Listar_Jogadores";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Listar_Jogadores_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Listar_Jogadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Listar_JogadoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).EndInit();

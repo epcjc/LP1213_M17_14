@@ -30,5 +30,10 @@ namespace LP_17
             this.paisTableAdapter.Fill(this.bDDataSet.Pais);
 
         }
+
+        private void Inserir_Pais_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
     }
 }

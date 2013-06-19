@@ -20,5 +20,10 @@ namespace LP_17
         {
 
         }
+
+        private void Inserir_Jogo_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
     }
 }

@@ -43,9 +43,12 @@
             this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
             this.tableAdapterManager = new LP_17.BDDataSetTableAdapters.TableAdapterManager();
             this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -54,6 +57,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.textBox1, "Nome completo da equipa.");
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // textBox2
             // 
@@ -61,6 +66,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.textBox2, "Ano em que foi fundada.");
+            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
             // comboBox1
             // 
@@ -160,6 +167,10 @@
             // 
             this.paisTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Inserir_Equipa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,12 +184,17 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Inserir_Equipa";
             this.Text = "Inserir_Equipa";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Inserir_Equipa_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Inserir_Equipa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +216,7 @@
         private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private BDDataSetTableAdapters.PaisTableAdapter paisTableAdapter;
         private System.Windows.Forms.BindingSource paisBindingSource;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -40,5 +40,10 @@ namespace LP_17
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void Relatorio_Equipa_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
     }
 }

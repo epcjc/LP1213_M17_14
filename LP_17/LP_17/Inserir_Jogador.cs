@@ -65,5 +65,26 @@ namespace LP_17
         {
             this.Close();
         }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                errorProvider1.SetError(textBox1, "Não pode ser vazio !!");
+            }
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBox3.Text == "")
+            {
+                errorProvider1.SetError(textBox3, "Não pode ser vazio !!");
+            }
+        }
+
+        private void Inserir_Jogador_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
     }
 }

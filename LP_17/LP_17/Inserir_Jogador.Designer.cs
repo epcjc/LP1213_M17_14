@@ -49,10 +49,13 @@
             this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
             this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -61,6 +64,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(161, 20);
             this.textBox1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.textBox1, "Número da camisola.");
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // textBox3
             // 
@@ -68,6 +73,8 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(161, 20);
             this.textBox3.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.textBox3, "Nome completo do jogador.");
+            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
             // comboBox1
             // 
@@ -212,6 +219,10 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(161, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Inserir_Jogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,13 +240,18 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Inserir_Jogador";
             this.Text = "Inserir_Jogador";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Inserir_Jogador_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Inserir_Jogador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +279,7 @@
         private System.Windows.Forms.BindingSource paisBindingSource;
         private BDDataSetTableAdapters.EquipaTableAdapter equipaTableAdapter;
         private System.Windows.Forms.BindingSource equipaBindingSource;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

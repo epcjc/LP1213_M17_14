@@ -80,5 +80,11 @@ namespace LP_17
             Listar_Utilizadores frm = new Listar_Utilizadores();
             frm.Show();
         }
+
+        private void Menu_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
+
     }
 }
