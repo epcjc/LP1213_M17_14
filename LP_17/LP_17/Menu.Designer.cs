@@ -31,20 +31,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.torneiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.equipasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treinadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.utilizadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,6 @@
             // 
             this.torneiosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoToolStripMenuItem,
-            this.editarToolStripMenuItem,
             this.listarToolStripMenuItem4});
             this.torneiosToolStripMenuItem.Name = "torneiosToolStripMenuItem";
             this.torneiosToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
@@ -80,11 +79,18 @@
             this.novoToolStripMenuItem.Text = "Novo";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
+            // listarToolStripMenuItem4
+            // 
+            this.listarToolStripMenuItem4.Name = "listarToolStripMenuItem4";
+            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem4.Text = "Listar";
+            // 
             // equipasToolStripMenuItem
             // 
             this.equipasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novaToolStripMenuItem,
-            this.listarToolStripMenuItem3});
+            this.listarToolStripMenuItem3,
+            this.pesquisarEquipaToolStripMenuItem});
             this.equipasToolStripMenuItem.Name = "equipasToolStripMenuItem";
             this.equipasToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.equipasToolStripMenuItem.Text = "Equipas";
@@ -92,14 +98,23 @@
             // novaToolStripMenuItem
             // 
             this.novaToolStripMenuItem.Name = "novaToolStripMenuItem";
-            this.novaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.novaToolStripMenuItem.Text = "Nova";
+            this.novaToolStripMenuItem.Click += new System.EventHandler(this.novaToolStripMenuItem_Click);
             // 
-            // editarToolStripMenuItem
+            // listarToolStripMenuItem3
             // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.listarToolStripMenuItem3.Name = "listarToolStripMenuItem3";
+            this.listarToolStripMenuItem3.Size = new System.Drawing.Size(163, 22);
+            this.listarToolStripMenuItem3.Text = "Listar";
+            this.listarToolStripMenuItem3.Click += new System.EventHandler(this.listarToolStripMenuItem3_Click);
+            // 
+            // pesquisarEquipaToolStripMenuItem
+            // 
+            this.pesquisarEquipaToolStripMenuItem.Name = "pesquisarEquipaToolStripMenuItem";
+            this.pesquisarEquipaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.pesquisarEquipaToolStripMenuItem.Text = "Pesquisar Equipa";
+            this.pesquisarEquipaToolStripMenuItem.Click += new System.EventHandler(this.pesquisarEquipaToolStripMenuItem_Click);
             // 
             // treinadorToolStripMenuItem
             // 
@@ -115,6 +130,14 @@
             this.inserirToolStripMenuItem.Name = "inserirToolStripMenuItem";
             this.inserirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inserirToolStripMenuItem.Text = "Inserir";
+            this.inserirToolStripMenuItem.Click += new System.EventHandler(this.inserirToolStripMenuItem_Click);
+            // 
+            // listarToolStripMenuItem2
+            // 
+            this.listarToolStripMenuItem2.Name = "listarToolStripMenuItem2";
+            this.listarToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem2.Text = "Listar";
+            this.listarToolStripMenuItem2.Click += new System.EventHandler(this.listarToolStripMenuItem2_Click);
             // 
             // jogadoresToolStripMenuItem
             // 
@@ -130,6 +153,14 @@
             this.inserirToolStripMenuItem1.Name = "inserirToolStripMenuItem1";
             this.inserirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.inserirToolStripMenuItem1.Text = "Inserir";
+            this.inserirToolStripMenuItem1.Click += new System.EventHandler(this.inserirToolStripMenuItem1_Click);
+            // 
+            // listarToolStripMenuItem1
+            // 
+            this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
+            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem1.Text = "Listar";
+            this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
             // 
             // utilizadorToolStripMenuItem
             // 
@@ -145,36 +176,14 @@
             this.inserirToolStripMenuItem2.Name = "inserirToolStripMenuItem2";
             this.inserirToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.inserirToolStripMenuItem2.Text = "Inserir";
+            this.inserirToolStripMenuItem2.Click += new System.EventHandler(this.inserirToolStripMenuItem2_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarToolStripMenuItem.Text = "Listar";
-            // 
-            // listarToolStripMenuItem1
-            // 
-            this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.listarToolStripMenuItem1.Text = "Listar";
-            // 
-            // listarToolStripMenuItem2
-            // 
-            this.listarToolStripMenuItem2.Name = "listarToolStripMenuItem2";
-            this.listarToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.listarToolStripMenuItem2.Text = "Listar";
-            // 
-            // listarToolStripMenuItem3
-            // 
-            this.listarToolStripMenuItem3.Name = "listarToolStripMenuItem3";
-            this.listarToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.listarToolStripMenuItem3.Text = "Listar";
-            // 
-            // listarToolStripMenuItem4
-            // 
-            this.listarToolStripMenuItem4.Name = "listarToolStripMenuItem4";
-            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
-            this.listarToolStripMenuItem4.Text = "Listar";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -199,7 +208,6 @@
         private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem treinadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem4;
@@ -211,5 +219,6 @@
         private System.Windows.Forms.ToolStripMenuItem utilizadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pesquisarEquipaToolStripMenuItem;
     }
 }

@@ -24,6 +24,7 @@ namespace LP_17
 
             if (res != 1)
             {
+                textBox3.Text = "";
                 MessageBox.Show("Acesso negado", "Erro a fazer login", MessageBoxButtons.OK);
             }
             else
