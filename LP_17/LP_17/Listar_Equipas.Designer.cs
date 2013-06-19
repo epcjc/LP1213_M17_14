@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BDDataSet = new LP_17.BDDataSet();
             this.Listar_EquipasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BDDataSet = new LP_17.BDDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Listar_EquipasTableAdapter = new LP_17.BDDataSetTableAdapters.Listar_EquipasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Listar_EquipasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Listar_EquipasBindingSource
+            // 
+            this.Listar_EquipasBindingSource.DataMember = "Listar_Equipas";
+            this.Listar_EquipasBindingSource.DataSource = this.BDDataSet;
+            // 
+            // BDDataSet
+            // 
+            this.BDDataSet.DataSetName = "BDDataSet";
+            this.BDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,18 +57,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LP_17.Listar_Equipas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(284, 261);
+            this.reportViewer1.Size = new System.Drawing.Size(452, 330);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // BDDataSet
-            // 
-            this.BDDataSet.DataSetName = "BDDataSet";
-            this.BDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Listar_EquipasBindingSource
-            // 
-            this.Listar_EquipasBindingSource.DataMember = "Listar_Equipas";
-            this.Listar_EquipasBindingSource.DataSource = this.BDDataSet;
             // 
             // Listar_EquipasTableAdapter
             // 
@@ -68,13 +68,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(452, 330);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Listar_Equipas";
             this.Text = "Listar_Equipas";
             this.Load += new System.EventHandler(this.Listar_Equipas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Listar_EquipasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
