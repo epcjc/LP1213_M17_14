@@ -86,5 +86,16 @@ namespace LP_17
             Help.ShowHelp(this, "Ajuda.chm");
         }
 
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nºDeEquipasDeCadaTorneioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Total_Equipas frm = new Total_Equipas();
+            frm.Show();
+        }
+
     }
 }

@@ -30,6 +30,8 @@ namespace LP_17
                 {
                     this.equipaTableAdapter.Insert(textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(textBox2.Text));
                     MessageBox.Show("Dados inseridos com sucesso !!");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
                 }
                 else
                 {

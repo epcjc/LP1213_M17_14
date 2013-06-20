@@ -45,9 +45,15 @@
             this.tableAdapterManager = new LP_17.BDDataSetTableAdapters.TableAdapterManager();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.equipaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equipaTableAdapter = new LP_17.BDDataSetTableAdapters.EquipaTableAdapter();
+            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paisTableAdapter = new LP_17.BDDataSetTableAdapters.PaisTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -68,19 +74,25 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.equipaBindingSource;
+            this.comboBox1.DisplayMember = "Nome";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(152, 71);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(165, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.ValueMember = "ID";
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.paisBindingSource;
+            this.comboBox2.DisplayMember = "Nome";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(152, 112);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(165, 21);
             this.comboBox2.TabIndex = 4;
+            this.comboBox2.ValueMember = "ID";
             // 
             // button1
             // 
@@ -173,6 +185,24 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // equipaBindingSource
+            // 
+            this.equipaBindingSource.DataMember = "Equipa";
+            this.equipaBindingSource.DataSource = this.bDDataSet;
+            // 
+            // equipaTableAdapter
+            // 
+            this.equipaTableAdapter.ClearBeforeFill = true;
+            // 
+            // paisBindingSource
+            // 
+            this.paisBindingSource.DataMember = "Pais";
+            this.paisBindingSource.DataSource = this.bDDataSet;
+            // 
+            // paisTableAdapter
+            // 
+            this.paisTableAdapter.ClearBeforeFill = true;
+            // 
             // Inserir_Treinador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +228,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +253,9 @@
         private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.BindingSource equipaBindingSource;
+        private BDDataSetTableAdapters.EquipaTableAdapter equipaTableAdapter;
+        private System.Windows.Forms.BindingSource paisBindingSource;
+        private BDDataSetTableAdapters.PaisTableAdapter paisTableAdapter;
     }
 }

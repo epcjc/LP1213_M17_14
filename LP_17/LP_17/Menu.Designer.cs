@@ -45,6 +45,7 @@
             this.utilizadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nºDeEquipasDeCadaTorneioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,8 @@
             // 
             this.torneiosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoToolStripMenuItem,
-            this.listarToolStripMenuItem4});
+            this.listarToolStripMenuItem4,
+            this.nºDeEquipasDeCadaTorneioToolStripMenuItem});
             this.torneiosToolStripMenuItem.Name = "torneiosToolStripMenuItem";
             this.torneiosToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.torneiosToolStripMenuItem.Text = "Torneios";
@@ -75,14 +77,14 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem4
             // 
             this.listarToolStripMenuItem4.Name = "listarToolStripMenuItem4";
-            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(103, 22);
+            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(233, 22);
             this.listarToolStripMenuItem4.Text = "Listar";
             // 
             // equipasToolStripMenuItem
@@ -99,7 +101,7 @@
             // 
             this.novaToolStripMenuItem.Name = "novaToolStripMenuItem";
             this.novaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.novaToolStripMenuItem.Text = "Nova";
+            this.novaToolStripMenuItem.Text = "Inserir";
             this.novaToolStripMenuItem.Click += new System.EventHandler(this.novaToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem3
@@ -185,6 +187,13 @@
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
+            // nºDeEquipasDeCadaTorneioToolStripMenuItem
+            // 
+            this.nºDeEquipasDeCadaTorneioToolStripMenuItem.Name = "nºDeEquipasDeCadaTorneioToolStripMenuItem";
+            this.nºDeEquipasDeCadaTorneioToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.nºDeEquipasDeCadaTorneioToolStripMenuItem.Text = "Nº de equipas de cada torneio";
+            this.nºDeEquipasDeCadaTorneioToolStripMenuItem.Click += new System.EventHandler(this.nºDeEquipasDeCadaTorneioToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +207,7 @@
             this.Name = "Menu";
             this.Text = "Menu";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Menu_HelpButtonClicked);
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -224,5 +234,6 @@
         private System.Windows.Forms.ToolStripMenuItem inserirToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisarEquipaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nºDeEquipasDeCadaTorneioToolStripMenuItem;
     }
 }

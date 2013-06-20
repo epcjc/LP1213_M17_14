@@ -54,6 +54,8 @@ namespace LP_17
                     }
 
                     MessageBox.Show("Dados inseridos com sucesso !!");
+                    textBox1.Text = "";
+                    
                 }
                 else
                 {

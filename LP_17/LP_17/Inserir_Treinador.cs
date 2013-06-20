@@ -31,6 +31,10 @@ namespace LP_17
 
         private void Inserir_Treinador_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bDDataSet.Pais' table. You can move, or remove it, as needed.
+            this.paisTableAdapter.Fill(this.bDDataSet.Pais);
+            // TODO: This line of code loads data into the 'bDDataSet.Equipa' table. You can move, or remove it, as needed.
+            this.equipaTableAdapter.Fill(this.bDDataSet.Equipa);
             
 
         }
@@ -49,6 +53,7 @@ namespace LP_17
                 {
                     this.treinadorTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(comboBox2.SelectedValue));
                     MessageBox.Show("Dados inseridos com sucesso !!");
+                    textBox1.Text = "";
                 }
                 else
                 {

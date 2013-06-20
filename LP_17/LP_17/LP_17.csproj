@@ -162,6 +162,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Total_Equipas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Total_Equipas.Designer.cs">
+      <DependentUpon>Total_Equipas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Inserir_Equipa.resx">
       <DependentUpon>Inserir_Equipa.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +223,10 @@
     <EmbeddedResource Include="Relatorio_Equipa.rdlc" />
     <EmbeddedResource Include="Relatorio_Equipa.resx">
       <DependentUpon>Relatorio_Equipa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Total_Equipas.rdlc" />
+    <EmbeddedResource Include="Total_Equipas.resx">
+      <DependentUpon>Total_Equipas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Ajuda.chm" />
     <None Include="app.config" />

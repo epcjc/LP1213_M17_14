@@ -34,7 +34,6 @@ namespace LP_17
             try
             {
                 string message = "Confirmar !!";
-                string a = "";
 
                 var result = MessageBox.Show(message, "Inserção",
                                       MessageBoxButtons.YesNo,
@@ -42,8 +41,10 @@ namespace LP_17
 
                 if (result == DialogResult.Yes)
                 {
-                    this.jogadoresTableAdapter.Insert(Convert.ToInt16(textBox1.Text), textBox3.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(a), Convert.ToInt16(comboBox2.Text));
+                    this.jogadoresTableAdapter.Insert(Convert.ToInt16(textBox1.Text), textBox3.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox2.SelectedValue), null, null, null, null, Convert.ToInt16(comboBox1.Text));
                     MessageBox.Show("Dados inseridos com sucesso !!");
+                    textBox1.Text = "";
+                    textBox3.Text = "";
                 }
                 else
                 {
