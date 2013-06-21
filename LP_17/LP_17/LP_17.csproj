@@ -228,7 +228,9 @@
     <EmbeddedResource Include="Total_Equipas.resx">
       <DependentUpon>Total_Equipas.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Ajuda.chm" />
+    <None Include="Ajuda.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="app.config" />
     <None Include="BDDataSet.xsc">
       <DependentUpon>BDDataSet.xsd</DependentUpon>

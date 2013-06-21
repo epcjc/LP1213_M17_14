@@ -41,7 +41,7 @@ namespace LP_17
 
                 if (result == DialogResult.Yes)
                 {
-                    this.jogadoresTableAdapter.Insert(Convert.ToInt16(textBox1.Text), textBox3.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox2.SelectedValue), null, null, null, null, Convert.ToInt16(comboBox1.Text));
+                    this.jogadoresTableAdapter.Insert(Convert.ToInt16(textBox1.Text), textBox3.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox2.SelectedValue), null, null, null, null, Convert.ToInt16(comboBox1.SelectedValue));
                     MessageBox.Show("Dados inseridos com sucesso !!");
                     textBox1.Text = "";
                     textBox3.Text = "";
@@ -55,7 +55,7 @@ namespace LP_17
 
             catch (Exception ex)
             {
-                MessageBox.Show("Erro !!") ;
+                MessageBox.Show("Erro !! -> " + ex.Message) ;
 
             }
             
