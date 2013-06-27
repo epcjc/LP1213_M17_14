@@ -103,5 +103,43 @@ namespace LP_17
             frm.ShowDialog();
         }
 
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listar_Torneios frm = new Listar_Torneios();
+            frm.ShowDialog();
+        }
+
+        private void RelatorioToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Relatorio_Torneios frm = new Relatorio_Torneios();
+            frm.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Listar_Utilizadores frm = new Listar_Utilizadores();
+            frm.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Listar_Treinadores frm = new Listar_Treinadores();
+            frm.ShowDialog();
+
+        }
+
+        private void listarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Listar_Jogadores frm = new Listar_Jogadores();
+            frm.ShowDialog();
+
+        }
+
+        private void listarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Listar_Equipas frm = new Listar_Equipas();
+            frm.ShowDialog();
+        }
+
     }
 }

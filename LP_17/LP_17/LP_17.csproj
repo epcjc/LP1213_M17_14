@@ -124,6 +124,36 @@
     <Compile Include="Inserir_Utilizador.Designer.cs">
       <DependentUpon>Inserir_Utilizador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Listar_Equipas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar_Equipas.Designer.cs">
+      <DependentUpon>Listar_Equipas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_Jogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar_Jogadores.Designer.cs">
+      <DependentUpon>Listar_Jogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_Torneios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar_Torneios.Designer.cs">
+      <DependentUpon>Listar_Torneios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_Treinadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar_Treinadores.Designer.cs">
+      <DependentUpon>Listar_Treinadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_Utilizadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar_Utilizadores.Designer.cs">
+      <DependentUpon>Listar_Utilizadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorio_Equipas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +165,12 @@
     </Compile>
     <Compile Include="Relatorio_Jogadores.Designer.cs">
       <DependentUpon>Relatorio_Jogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio_Torneios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio_Torneios.Designer.cs">
+      <DependentUpon>Relatorio_Torneios.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatorio_Treinadores.cs">
       <SubType>Form</SubType>
@@ -198,6 +234,21 @@
     <EmbeddedResource Include="Inserir_Utilizador.resx">
       <DependentUpon>Inserir_Utilizador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listar_Equipas.resx">
+      <DependentUpon>Listar_Equipas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar_Jogadores.resx">
+      <DependentUpon>Listar_Jogadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar_Torneios.resx">
+      <DependentUpon>Listar_Torneios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar_Treinadores.resx">
+      <DependentUpon>Listar_Treinadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar_Utilizadores.resx">
+      <DependentUpon>Listar_Utilizadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio_Equipas.rdlc" />
     <EmbeddedResource Include="Relatorio_Equipas.resx">
       <DependentUpon>Relatorio_Equipas.cs</DependentUpon>
@@ -206,6 +257,10 @@
     <EmbeddedResource Include="Relatorio_Jogadores.rdlc" />
     <EmbeddedResource Include="Relatorio_Jogadores.resx">
       <DependentUpon>Relatorio_Jogadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio_Torneios.rdlc" />
+    <EmbeddedResource Include="Relatorio_Torneios.resx">
+      <DependentUpon>Relatorio_Torneios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio_Treinadores.rdlc" />
     <EmbeddedResource Include="Relatorio_Treinadores.resx">

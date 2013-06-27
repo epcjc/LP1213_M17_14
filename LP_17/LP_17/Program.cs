@@ -16,7 +16,7 @@ namespace LP_17
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
-            Application.Run(new Menu());
+            Application.Run(new Login());
         }
     }
 }

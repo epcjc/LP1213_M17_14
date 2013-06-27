@@ -1,6 +1,6 @@
 ﻿namespace LP_17
 {
-    partial class Total_Equipas
+    partial class Relatorio_Torneios
     {
         /// <summary>
         /// Required designer variable.
@@ -32,54 +32,49 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BDDataSet = new LP_17.BDDataSet();
-            this.Total_EquipasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Total_EquipasTableAdapter = new LP_17.BDDataSetTableAdapters.Total_EquipasTableAdapter();
+            this.Relatorio_TorneiosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Relatorio_TorneiosTableAdapter = new LP_17.BDDataSetTableAdapters.Relatorio_TorneiosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total_EquipasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Relatorio_TorneiosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Total_EquipasBindingSource;
+            reportDataSource1.Value = this.Relatorio_TorneiosBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LP_17.Relatorio_Total_Equipas.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LP_17.Relatorio_Torneios.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(611, 286);
+            this.reportViewer1.Size = new System.Drawing.Size(421, 300);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // BDDataSet
             // 
             this.BDDataSet.DataSetName = "BDDataSet";
             this.BDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Total_EquipasBindingSource
+            // Relatorio_TorneiosBindingSource
             // 
-            this.Total_EquipasBindingSource.DataMember = "Total_Equipas";
-            this.Total_EquipasBindingSource.DataSource = this.BDDataSet;
+            this.Relatorio_TorneiosBindingSource.DataMember = "Relatorio_Torneios";
+            this.Relatorio_TorneiosBindingSource.DataSource = this.BDDataSet;
             // 
-            // Total_EquipasTableAdapter
+            // Relatorio_TorneiosTableAdapter
             // 
-            this.Total_EquipasTableAdapter.ClearBeforeFill = true;
+            this.Relatorio_TorneiosTableAdapter.ClearBeforeFill = true;
             // 
-            // Total_Equipas
+            // Relatorio_Torneios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 286);
+            this.ClientSize = new System.Drawing.Size(421, 300);
             this.Controls.Add(this.reportViewer1);
-            this.HelpButton = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Total_Equipas";
-            this.Text = "Total_Equipas";
-            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Total_Equipas_HelpButtonClicked);
-            this.Load += new System.EventHandler(this.Total_Equipas_Load);
+            this.Name = "Relatorio_Torneios";
+            this.Text = "Relatorio_Torneios";
+            this.Load += new System.EventHandler(this.Relatorio_Torneios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total_EquipasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Relatorio_TorneiosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,8 +82,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource Total_EquipasBindingSource;
+        private System.Windows.Forms.BindingSource Relatorio_TorneiosBindingSource;
         private BDDataSet BDDataSet;
-        private BDDataSetTableAdapters.Total_EquipasTableAdapter Total_EquipasTableAdapter;
+        private BDDataSetTableAdapters.Relatorio_TorneiosTableAdapter Relatorio_TorneiosTableAdapter;
     }
 }

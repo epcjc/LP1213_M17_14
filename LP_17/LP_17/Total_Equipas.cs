@@ -20,6 +20,7 @@ namespace LP_17
         {
             // TODO: This line of code loads data into the 'BDDataSet.Total_Equipas' table. You can move, or remove it, as needed.
             this.Total_EquipasTableAdapter.Fill(this.BDDataSet.Total_Equipas);
+            
 
             this.reportViewer1.RefreshReport();
         }
@@ -27,6 +28,11 @@ namespace LP_17
         private void Total_Equipas_HelpButtonClicked(object sender, CancelEventArgs e)
         {
             Help.ShowHelp(this, "Ajuda.chm");
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
