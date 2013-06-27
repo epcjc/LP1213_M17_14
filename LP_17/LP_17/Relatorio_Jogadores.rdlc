@@ -60,10 +60,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>BDDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Mantyz\Documents\GitHub\LP1213_M17_14\LP_17\LP_17\BDDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Listar_Jogadores</rd:TableName>
+        <rd:TableName>Relatorio_Jogadores</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Listar_JogadoresTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>Relatorio_JogadoresTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

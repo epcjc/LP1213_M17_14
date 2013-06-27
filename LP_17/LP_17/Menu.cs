@@ -19,7 +19,7 @@ namespace LP_17
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Inserir_Torneios frm = new Inserir_Torneios();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -30,55 +30,55 @@ namespace LP_17
         private void novaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Inserir_Equipa frm = new Inserir_Equipa();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void inserirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Inserir_Treinador frm = new Inserir_Treinador();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void inserirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Inserir_Jogador frm = new Inserir_Jogador();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void inserirToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             Inserir_Utilizador frm = new Inserir_Utilizador();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pesquisarEquipaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Relatorio_Equipa frm = new Relatorio_Equipa();
-            frm.Show();
+            frm.ShowDialog();
         }
 
-        private void listarToolStripMenuItem3_Click(object sender, EventArgs e)
+        private void RelatorioToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Listar_Equipas frm = new Listar_Equipas();
-            frm.Show();
+            Relatorio_Equipas frm = new Relatorio_Equipas();
+            frm.ShowDialog();
         }
 
-        private void listarToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void RelatorioToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Listar_Treinadores frm = new Listar_Treinadores();
-            frm.Show();
+            Relatorio_Treinadores frm = new Relatorio_Treinadores();
+            frm.ShowDialog();
         }
 
-        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void RelatorioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Listar_Jogadores frm = new Listar_Jogadores();
-            frm.Show();
+            Relatorio_Jogadores frm = new Relatorio_Jogadores();
+            frm.ShowDialog();
         }
 
-        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RelatorioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Listar_Utilizadores frm = new Listar_Utilizadores();
-            frm.Show();
+            Relatorio_Utilizadores frm = new Relatorio_Utilizadores();
+            frm.ShowDialog();
         }
 
         private void Menu_HelpButtonClicked(object sender, CancelEventArgs e)
@@ -94,7 +94,13 @@ namespace LP_17
         private void nºDeEquipasDeCadaTorneioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Total_Equipas frm = new Total_Equipas();
-            frm.Show();
+            frm.ShowDialog();
+        }
+
+        private void verTorneiosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EscolherTorneio frm = new EscolherTorneio();
+            frm.ShowDialog();
         }
 
     }

@@ -49,18 +49,25 @@ namespace LP_17
                                       MessageBoxButtons.YesNo,
                                       MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
+                if (textBox1.Text.Trim().Length == 0)
                 {
-                    this.treinadorTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(comboBox2.SelectedValue));
-                    MessageBox.Show("Dados inseridos com sucesso !!");
-                    textBox1.Text = "";
+                    MessageBox.Show("Nome do utilizador em falta");
                 }
                 else
                 {
-                    MessageBox.Show("Operação Cancelada !!");
+                    if (result == DialogResult.Yes)
+                    {
+                        this.treinadorTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(comboBox2.SelectedValue));
+                        textBox1.Text = "";
+                    }
+                    else
+                    {
+                        
+                        MessageBox.Show("Operação Cancelada !!");
+                    }
                 }
-            }
 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro !!");

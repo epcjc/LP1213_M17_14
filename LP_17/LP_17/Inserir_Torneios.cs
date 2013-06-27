@@ -43,34 +43,43 @@ namespace LP_17
                                       MessageBoxButtons.YesNo,
                                       MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
+                if (textBox1.Text.Trim().Length == 0)
                 {
-                    foreach (DataRowView drv in listBox1.SelectedItems)
-                    {
-                        ID_Equipa = (int)drv["ID"];
-
-                        this.torneio_EquipasTableAdapter.Insert(ultimoId, ID_Equipa);
-
-                    }
-
-                    MessageBox.Show("Dados inseridos com sucesso !!");
-                    textBox1.Text = "";
-                    
+                    MessageBox.Show("Nome do torneio em falta");
                 }
                 else
                 {
-                    MessageBox.Show("Operação cancelada !!");
+                    if (result == DialogResult.Yes)
+                    {
+                        foreach (DataRowView drv in listBox1.SelectedItems)
+                        {
+                            ID_Equipa = (int)drv["ID"];
+
+                            this.torneio_EquipasTableAdapter.Insert(ultimoId, ID_Equipa);
+
+                        }
+
+                        textBox1.Text = "";
+
+
+                    }
+                    else
+                    {
+                        
+                        MessageBox.Show("Operação cancelada !!");
+                    }
+
                 }
 
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show("Erro !!");
 
             }
-
+        
         }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
