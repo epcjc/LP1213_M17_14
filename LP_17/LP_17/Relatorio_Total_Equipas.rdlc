@@ -41,10 +41,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.44258in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.11967in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -127,7 +127,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -223,7 +222,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>1.2cm</Height>
-        <Width>4.99999cm</Width>
+        <Width>6.50811cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

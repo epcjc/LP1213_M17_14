@@ -29,7 +29,8 @@ namespace LP_17
             }
             else
             {
-                
+
+                this.Hide();
                 Menu frm = new Menu();
                 frm.Show();
                 

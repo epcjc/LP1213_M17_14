@@ -43,34 +43,34 @@ namespace LP_17
         {
             try
             {
-                string message = "Confirmar !!";
+                string message = "Pretende mesmo inserir?";
 
-                var result = MessageBox.Show(message, "Inserção",
+                var result = MessageBox.Show(message, "Confirmação",
                                       MessageBoxButtons.YesNo,
                                       MessageBoxIcon.Question);
 
-                if (textBox1.Text.Trim().Length == 0)
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Nome do utilizador em falta");
-                }
-                else
-                {
-                    if (result == DialogResult.Yes)
+                    if (textBox1.Text.Trim().Length == 0)
+                    {
+                        MessageBox.Show("Nome do treinador em falta");
+                    }
+                    else
                     {
                         this.treinadorTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(comboBox2.SelectedValue));
                         textBox1.Text = "";
                     }
-                    else
-                    {
-                        
-                        MessageBox.Show("Operação Cancelada !!");
-                    }
+                }
+                else
+                {
+
+                    MessageBox.Show("Operação cancelada");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro !!");
+                MessageBox.Show("Erro, verifique se inseriu todos os campos corretamente, se o erro persistir contacte o fabricante");
 
             }
             
@@ -86,7 +86,7 @@ namespace LP_17
         {
             if (textBox1.Text == "")
             {
-                errorProvider1.SetError(textBox1, "Não pode ser vazio !!");
+                errorProvider1.SetError(textBox1, "Insira o nome do treinador");
             }
         }
 

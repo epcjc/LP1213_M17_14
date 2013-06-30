@@ -34,47 +34,54 @@ namespace LP_17
 
             try
             {
-                string message = "Confirmar !!";
+                string message = "Pretende mesmo inserir?";
                 this.torneiosTableAdapter.Insert(textBox1.Text, dateTimePicker1.Value, null, null, 1);
                 int ultimoId = (int)this.torneiosTableAdapter.UltimoID();
                 int ID_Equipa;
 
-                var result = MessageBox.Show(message, "Inserção",
+                var result = MessageBox.Show(message, "Confirmação",
                                       MessageBoxButtons.YesNo,
                                       MessageBoxIcon.Question);
 
-                if (textBox1.Text.Trim().Length == 0)
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Nome do torneio em falta");
-                }
-                else
-                {
-                    if (result == DialogResult.Yes)
+                    if (listBox1.SelectedValue == null | Convert.ToInt16(listBox1.SelectedValue) == 1)
                     {
-                        foreach (DataRowView drv in listBox1.SelectedItems)
-                        {
-                            ID_Equipa = (int)drv["ID"];
-
-                            this.torneio_EquipasTableAdapter.Insert(ultimoId, ID_Equipa);
-
-                        }
-
-                        textBox1.Text = "";
-
-
+                        MessageBox.Show("Tem de inserir no mínimo 2 equipas");
                     }
                     else
                     {
-                        
-                        MessageBox.Show("Operação cancelada !!");
-                    }
+                        if (textBox1.Text.Trim().Length == 0)
+                        {
+                            MessageBox.Show("Nome do torneio em falta");
+                        }
+                        else
+                        {
+                            foreach (DataRowView drv in listBox1.SelectedItems)
+                            {
+                                ID_Equipa = (int)drv["ID"];
 
+                                this.torneio_EquipasTableAdapter.Insert(ultimoId, ID_Equipa);
+
+                            }
+
+                            textBox1.Text = "";
+
+
+                        }
+                    }
+                }
+                else
+                {
+
+                    MessageBox.Show("Operação cancelada");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro !!");
+                MessageBox.Show("Erro, verifique se inseriu todos os campos corretamente, se o erro persistir contacte o fabricante");
 
             }
         
@@ -90,7 +97,7 @@ namespace LP_17
         {
             if (textBox1.Text == "")
             {
-                errorProvider1.SetError(textBox1, "Não pode ser vazio !!");
+                errorProvider1.SetError(textBox1, "Insira o nome do torneio");
             }
         }
 
@@ -98,7 +105,7 @@ namespace LP_17
         {
             if (listBox1.Text == "")
             {
-                errorProvider1.SetError(listBox1, "Não pode ser vazio !!");
+                errorProvider1.SetError(listBox1, "Selecione 2 ou mais equipas");
             }
         }
 

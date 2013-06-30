@@ -53,7 +53,7 @@ namespace LP_17
 
         private void pesquisarEquipaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Relatorio_Equipa frm = new Relatorio_Equipa();
+            Pesquisar_Equipa frm = new Pesquisar_Equipa();
             frm.ShowDialog();
         }
 
@@ -138,6 +138,23 @@ namespace LP_17
         private void listarToolStripMenuItem4_Click(object sender, EventArgs e)
         {
             Listar_Equipas frm = new Listar_Equipas();
+            frm.ShowDialog();
+        }
+
+        private void utilizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inserirToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Inserir_Pais frm = new Inserir_Pais();
+            frm.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Listar_Pais frm = new Listar_Pais();
             frm.ShowDialog();
         }
 

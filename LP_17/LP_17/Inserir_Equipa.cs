@@ -20,29 +20,49 @@ namespace LP_17
         {
             try
             {
-                string message = "Confirmar !!";
+                string message = "Pretende mesmo inserir?";
 
-                var result = MessageBox.Show(message, "Inserção",
+                var result = MessageBox.Show(message, "Confirmação",
                                       MessageBoxButtons.YesNo,
                                       MessageBoxIcon.Question);
 
+                DateTime Data = DateTime.Now;
+                string DataFormato = Data.ToString("yyyy");
+                int a = Convert.ToInt16(textBox2.Text);
+                int b = Convert.ToInt16(DataFormato);
+
                 if (result == DialogResult.Yes)
                 {
-                    this.equipaTableAdapter.Insert(textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(textBox2.Text));
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    
+                    if (textBox1.Text.Trim().Length == 0)
+                    {
+                        MessageBox.Show("Nome da equipa em falta");
+                    }
+                    else
+                    {
+                        if (a <= b && a >= 1857)
+                        {
+                            this.equipaTableAdapter.Insert(textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue), Convert.ToInt16(textBox2.Text));
+                            textBox1.Text = "";
+                            textBox2.Text = "";
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Insira um ano de fundação entre 1857 e o atual (ambos incluídos)");
+                        }
+                    }
                 }
                 else
                 {
-                    
-                    MessageBox.Show("Operação Cancelada !!");
+
+                    MessageBox.Show("Operação cancelada");
                 }
+                
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Erro !!");
+                MessageBox.Show("Erro, verifique se inseriu todos os campos corretamente, se o erro persistir contacte o fabricante");
 
             }
         }
@@ -64,7 +84,7 @@ namespace LP_17
             
             if(textBox1.Text == "")
             {
-                errorProvider1.SetError(textBox1, "Não pode ser vazio !!");
+                errorProvider1.SetError(textBox1, "Insira o nome da equipa");
             }
             
         }
@@ -73,7 +93,7 @@ namespace LP_17
         {
             if (textBox2.Text == "")
             {
-                errorProvider1.SetError(textBox2, "Não pode ser vazio !!");
+                errorProvider1.SetError(textBox2, "Insira o ano de fundação, entre 1857 e o atual (ambos incluídos)");
             }
         }
 
